@@ -1,0 +1,699 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+li{
+    list-style: none;
+}
+img{
+    display: block;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 230);
+    width: 100vw;
+}
+/* header */
+header{
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+    display: flex;
+
+}
+#headerLeft{
+    margin-top: 25px;
+    font-family: "League Spartan";
+    text-align: center;
+    background-color: rgba(138, 165, 146, 0.534);
+    border-radius: 14px;
+    width: 200px;
+    height: 130px;
+    box-shadow: 5px 5px 10px 7px #aaa;
+}
+#logoTop{
+    font-size: 16px;
+    letter-spacing: 0.4em;
+}
+#logoMid{
+    font-size: 13px;
+    letter-spacing: 0.4em;
+}
+#logoBottom{
+    font-size: 12px;
+    text-decoration: underline;
+    letter-spacing: 0.4em;
+}
+#headerRight{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+#headerRightTop{
+    margin-bottom: 20px;
+    margin-top: 9px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#language{
+    font-size: 16px;
+    margin-right: 30px;
+}
+#language_jp{
+    margin-right: 5px;
+}
+#language_en{
+    margin-left: 5px;
+}
+#hd_btn_contact{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    width: 130px;
+    color: #fff;
+    background-color: black;
+    border-radius: 14px;
+    text-align: center;
+    padding: 10px 0;
+}
+#hd_btn_contact:hover,#ft_btn_contact:hover,#main_btn_contact:hover{
+    background-color: rgb(206, 34, 34);
+    font-weight: bold;
+    color: #fff;
+    opacity: 1;
+}
+#gnavi ul{
+    display: flex;
+}
+#gnavi ul li{
+    background-image: url("../images/ball.gif");
+    background-repeat: no-repeat;
+    background-position: left center;
+    border-bottom: 3px solid transparent;
+}
+#gnavi ul li:hover{
+    font-weight: bold;
+    border-bottom: solid 3px #ed9d42;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+}
+#mainPhoto img{
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title{
+    font-family: 'brandons-grotesque', sans-serif;
+    text-align: center;
+    width: 280px;
+    font-size: 30px;
+    letter-spacing: 0.22em;
+    display: flex;
+    flex-direction: column;
+}
+.title span{
+    display: block;
+    font-size: 16px;
+    letter-spacing: 0.20em;
+    color: blue;
+    position: relative;
+    width: auto;
+    margin: auto;
+}
+.title span::before{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: blue;
+    position: absolute;
+    top: 12px;
+    left: -40px;
+}
+.title span::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 1px;
+    background-color: blue;
+    position: absolute;
+    top: 12px;
+    right: -40px;
+}
+.btn{
+    display: block;
+    text-align: center;
+    border: solid 2px black;
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 13px;
+}
+.btn:hover{
+    color: red;
+    font-weight: 700;
+    transition: all 0.2s ease;
+    opacity: 1;
+}
+#news{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+#news ul{
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+#news ul li{
+    padding: 10px;
+    border-bottom: dotted 2px blue;
+}
+#news ul li a{
+    display: flex;
+    flex-wrap: wrap;
+}
+#news ul li:hover{
+    background-color: #d3d0c8;
+
+    transition: all 0.1s ease;
+}
+#news ul li time{
+    margin-right: 30px;
+    font-weight: bold;
+    padding: 6px 3px 3px 3px;
+}
+.news_tag{
+    font-size: 12px;
+    font-family: 'brandons-grotesque', sans-serif;
+    color: #fff;
+    margin-right: 30px;
+    padding: 5px 4px 0px 4px;
+    border: solid 2px rgb(233, 168, 168);
+    border-radius: 2px;
+    background-color: rgb(233, 168, 168);
+}
+.news_title{
+    padding: 3px;
+}
+#btn_news{
+    width: 50%;
+    margin: 35px auto 0;
+}
+.contentsA,.contentsB{
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    display: flex;
+    opacity: 0;
+    transform: translateY(100px);  
+    transition: 1s;
+}
+.contentsA.show,.contentsB.show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.subPhotoRight, .subPhotoLeft{
+    margin: auto;
+    box-sizing: border-box;
+    object-fit: cover;
+    height: auto;
+    max-width: 580px;
+    border: solid 8px #ed9d42;
+    border-radius: 20px 0px 20px 0px;
+    opacity: 0;
+    transition: 1s;
+}
+.subPhotoRight{
+    transform: translateX(150px); 
+}
+.subPhotoLeft{
+    transform: translateX(-150px);  
+}
+.subPhotoRight.show, .subPhotoLeft.show{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.sentence{
+    font-size: 16px;
+    margin: 30px 12px 0 24px;
+    height: auto;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+}
+.btn_detail{
+    width: 50%;
+    margin: 30px auto 0;
+}
+
+#gmapFrame{
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto; 
+    display: flex;
+    justify-content: space-evenly;
+}
+#gmapFrame h3{
+    border-bottom: solid 2px black;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+.mapInfo{
+    margin-bottom: 10px;
+}
+.mapInfo tr{
+    display: block;
+    margin-bottom: 7px;
+}
+.mapInfo th{
+    border:solid 2px #f2cd61;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+.mapInfo td{
+    padding-left: 15px;
+}
+iframe{
+    border-radius: 5px;
+    width: 100%;
+    height: 300px;
+}
+/* お申し込み */
+#omoushikomi{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(100px);  
+    transition: 1s;
+}
+#omoushikomi.show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+#omoushikomi h3{
+    color: #ed9d42;
+    font-size: 28px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#omoushikomi h3::before{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/bat.png);
+    background-size: contain;
+    vertical-align: middle;
+    transform: rotate(-30deg);
+}
+#omoushikomi h3::after{
+    content: "";
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../images/bat.png);
+    background-size: contain;
+    vertical-align: middle;
+    transform: rotate(30deg);
+}
+#omoushikomi p{
+    display: block;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+}
+#main_btn_contact{
+    display: block;
+    width: 30%;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: solid 1px #ed9d42;
+    border-radius: 16px;
+}
+/* footer */
+footer{
+    background-color: #06205c;
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+footer a, footer i{
+    color: #fff;
+}
+footer a:hover, footer i:hover{
+    color: #f2cd61;
+    opacity: 1;
+    font-weight: normal;
+}
+#footerFrame{
+    display: flex;
+}
+#fa_logo ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+#ft_btn_contact{
+    display: block;
+    width: 60%;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: solid 1px #fff;
+    border-radius: 16px;
+}
+#ftRightTop{
+    display: flex;
+    margin-bottom: 30px ;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#ftRightTop li{
+    font-size: 18px;
+}
+#ftRightBottom{
+    border-top:solid 2px #fff;
+    display: flex;
+    padding-top: 35px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#ftRightBottom li ul li{
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+#pageTop{
+    position: fixed;
+    bottom: 5px;
+    right: 7px;
+    display: block;
+    background: url('../images/ball2.png') no-repeat;
+    width: 100px;
+    height: 100px;
+}
+#pageTop.off{
+    display: none;
+}    
+#pageTop:hover{
+    background:url('../images/pagetopon.png') no-repeat;
+    width: 110px;
+    height: 100px;
+    transition: 0s;
+}
+.wrap{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.wrapView{
+    overflow: hidden;
+}
+/* RESPONSIVE 設定 */
+@media only screen and (min-width: 960px){
+    header, main{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #gnavi{
+        padding: 15px 15px 15px 15px;
+    }
+    #gnavi ul{
+        flex-direction: row;
+    }
+    #gnavi ul li{
+        background-size: 15px;
+        font-size: 18px;
+        padding-left: 20px;
+        margin-right: 30px;
+    }
+    #gnavi ul li:nth-child(5){
+        margin-right: 0px;
+    }
+    #gnavi ul li:nth-child(6), #gnavi ul li:nth-child(7){
+        display: none;
+    }
+    .contentsA div,.contentsB div{
+        width: 50%;
+        padding-top: 50px;  
+    }
+    .article{
+        width: 50%;
+    }
+    #gmapFrame section{
+        width: 43%;
+    }
+
+    #footerFrame{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (min-width:481px){
+    header{
+        justify-content: space-between;
+    }
+
+    #footerFrame{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    #footerLeft{
+        width: 30%;
+        max-width: 330px;
+    }
+    #fa_logo ul{
+        height: 80px;
+    }
+    #footerRight{
+        width: 50%;
+        max-width: 500px;
+    }
+}
+
+@media only screen and (max-width: 959px){
+    #headerRight{
+        margin-top: 85px;
+    }
+    #nav-toggle {
+        position: fixed;
+        top: 15px;
+        right: 20px;
+        height: 25px;
+        z-index: 100;
+    }
+    #nav-toggle div {
+        position: relative;
+        width: 30px;
+    }
+    #nav-toggle span {
+        width: 100%;
+        height: 3px;
+        left: 0;
+        display: block;
+        background: #333;
+        position: absolute;
+        transition: transform .6s ease-in-out, top .5s ease;
+    }    
+    #nav-toggle span:nth-child(1) {
+        top: 0;
+    }
+    #nav-toggle span:nth-child(2) {
+        top: 10px;
+    } 
+    #nav-toggle span:nth-child(3) {
+        top: 20px;
+    }
+    .open #nav-toggle span {
+        background: #333;
+      }
+    .open #nav-toggle span:nth-child(1) {
+        top: 15px;
+        transform: rotate(45deg);
+      }
+    .open #nav-toggle span:nth-child(2) {
+        top: 15px;
+        width: 0;
+        left: 50%;
+      }
+    .open #nav-toggle span:nth-child(3) {
+        top: 15px;
+        transform: rotate(-45deg);
+      }
+    #gnavi{
+        width: 100%;
+        height: 100vh;
+        font-size: 30px;
+        background-color: #f9f9f9ed;
+        position: fixed;
+        top: 55px;
+        right: 0;
+        left: 0;
+        z-index: 100;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 0.6s ease;    
+    }
+    #gnavi ul{
+        flex-direction: column;
+    }
+    #gnavi ul li{
+        background-size: 20px;
+        padding: 0 10px 0 30px;
+        margin: 20px auto 40px auto;
+        font-size: 24px;
+    }
+    #gnavi ul li:nth-child(7){
+        font-size: 20px;
+        border-bottom: 3px solid black;
+        background-image: none;
+        padding: 5px;
+    }
+    .open #gnavi{
+        visibility: visible;
+        opacity: 1;
+    }
+    .contentsA, .contentsB{
+        align-items: center;
+    }
+    .contentsA{
+        flex-direction: column-reverse;
+    }
+    .contentsB{
+        flex-direction: column;
+    }
+    .article{
+        width: 85%;
+        margin-top: 25px;
+    }
+    #accessTop{
+        margin-bottom: 40px;
+    }
+    #gmapFrame{
+        width: 84%;
+        flex-direction: column;
+    }
+    #gmapFrame section{
+        margin-bottom: 35px;
+    }
+    #omoushikomi h3{
+        font-size: 25px;
+    }
+    #omoushikomi p{
+        font-size: 16px;
+    }
+    #main_btn_contact{
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #headerRightTop{
+        display: none;
+    }
+    #mainPhoto img{
+        height: auto;
+    }
+    .title{
+        width: 100%;
+        font-size: 24px ;
+    }
+    .title span{
+        font-size: 13px ;
+    }
+    .title span::before, .title span::after{
+        top: 10px;
+    }
+    .news_title{
+        font-size: 14px;
+    }
+    .contentsA, .contentsB{
+        width: 96%;
+    }
+    .article{
+        width: 90%;
+    }
+    .sentence{
+        font-size: 13px;
+        margin: 30px 12px 0 12px;
+        line-height: 1.6;
+    }
+    .mapInfo th,.mapInfo td{
+        font-size: 14px;
+    }
+    #omoushikomi h3{
+        font-size: 18px;
+    }
+    #omoushikomi h3::before,#omoushikomi h3::after{
+        width: 30px;
+        height: 30px;
+    }   
+    #omoushikomi p{
+        font-size: 12px;
+        letter-spacing: 0;
+    }
+    #main_btn_contact{
+        width: 50%;
+    }
+    #footerFrame{
+        flex-direction: column-reverse;
+    }
+    #footerLeft{
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #fa_logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 30px;
+        margin-bottom: 50px;
+        font-size: 13px;
+    }
+    #fa_logo ul {
+        width: 50%;
+        justify-content: space-around;
+    }
+    #footerRight{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #ftRightTop li,#ftRightBottom li ul li{
+        font-size: 15px;
+    }
+    #pageTop{
+        display: none;
+    }
+    
+}

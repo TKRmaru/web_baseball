@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>お問い合わせフォーム</title>
+    <link rel="icon" href="../images/bat_icon.png" type="image/png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../lib/jquery.bxslider.css">
+    <script src="https://kit.fontawesome.com/644a4d86cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <!-- header MENU -->
+    <div id="nav-toggle">
+        <div>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>
+    <nav id="gnavi">
+        <ul>
+            <li><a href="../index.html#concept">CONCEPT</a></li>
+            <li><a href="../index.html#aboutus">ABOUT US</a></li>
+            <li><a href="../index.html#lesson">LESSON</a></li>
+            <li><a href="../index.html#price">PRICE</a></li>
+            <li><a href="../index.html#access">ACCESS</a></li>
+            <li><a href=# target="_blank">CONTACT</a></li>
+            <li><a href="../index.html">HOME</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="ct_image">
+        <h1 class="title">CONTACT<span>お問い合わせ</span></h1>
+    </div>    
+    <div id="formArea">
+        <form action="#" method="post"></form>
+        <table id="formTable">
+            <tr>
+                <th  class="request">お名前</th>
+                <td><input type="text" name="name1" placeholder="山田　太郎" required class="input_comment"></td>
+            </tr>
+            <tr>
+                <th  class="request">ふりがな</th>
+                <td><input type="text" name="name2" placeholder="やまだ　たろう" required class="input_comment"></td>
+            </tr>
+            <tr>
+                <th>年齢</th>
+                <td><input type="number" name="age" placeholder="30" class="input_comment"></td>
+            </tr>
+            <tr>
+                <th  class="request">電話番号</th>
+                <td><input type="tel" name="tel" placeholder="012-3456-7890" required class="input_comment"></td>
+            </tr>
+            <tr>
+                <th  class="request">メールアドレス</th>
+                <td><input type="email" name="email" placeholder="abc@def.com" required class="input_comment"></td>
+            </tr>
+            <tr>
+                <th>希望連絡方法</th>
+                <td id="radio_contact">
+                    <label><input type="radio" name="howToContact" value="1" style="transform: scale(1.0);">電話</label>
+                    <label><input type="radio" name="howToContact" value="2" style="transform: scale(1.0);">メール</label>
+                    <label><input type="radio" name="howToContact" value="3" style="transform: scale(1.0);">どちらでも可</label>
+                </td>
+            </tr>
+            <tr>
+                <th>レッスン希望日</th>
+                <td><input type="date" name="schedule_date" value="" class="input_comment"></td>
+            </tr>
+            <tr>
+                <th>希望時間</th>
+                <td><select name="schedule_time" size="1" class="input_comment">
+                    <option value="non">選択してください</option>
+                    <option value="10:00">10:00</option>
+                    <option value="10:30">10:30</option>
+                    <option value="11:00">11:00</option>
+                    <option value="11:30">11:30</option>
+                    <option value="12:00">12:00</option>
+                    <option value="12:30">12:30</option>
+                    <option value="13:00">13:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="14:00">14:00</option>
+                    <option value="14:30">14:30</option>
+                    <option value="15:00">15:00</option>
+                    <option value="15:30">15:30</option>
+                    <option value="16:00">16:00</option>
+                    <option value="16:30">16:30</option>
+                    <option value="17:00">17:00</option>
+                    <option value="17:30">17:30</option>
+                    <option value="18:00">18:00</option>
+                    <option value="18:30">18:30</option>
+                    <option value="19:00">19:00</option>
+                    <option value="19:30">19:30</option>
+                    <option value="20:00">20:00</option>
+                    <option value="20:30">20:30</option>
+                    <option value="21:00">21:00</option>
+                    <option value="21:30">21:30</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th>希望ポジション</th>
+                <td><select name="position" class="input_comment">
+                    <option value="non">選択してください</option>
+                    <option value="p">投手</option>
+                    <option value="c">捕手</option>
+                    <option value="i">内野手</option>
+                    <option value="o">外野手</option>
+                    <option value="unknown">未定</option>
+                </select></td>
+            </tr>
+            <tr>
+                <th>その他お問合せ内容</th>
+                <td><textarea name="form_text" cols="40" rows="10"></textarea></td>
+            </tr>    
+        </table>
+        <div>
+            <input type="submit" value="確認" class="btn">
+        </div>
+    </div>
+</main>
+<footer>
+    <div id="footerFrame">
+        <!-- SNSロゴ、CONTACT -->
+        <div id="footerLeft">
+            <div id="fa_logo">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-instagram fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube fa-3x"></i></a></li>
+                </ul>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-weixin fa-3x"></i></a></li>
+                    <li><a href="#"><i class="fa-solid fa-envelope fa-3x"></i></a></li>
+                </ul>
+            </div>
+                <a href="#" target="_blank" id="ft_btn_contact">お申し込みはこちら</a>
+        </div>
+        <!-- Footer MENU -->
+        <div id="footerRight">
+                <ul id="ftRightTop">
+                    <li><a href="../index.html">トップページ</a></li>
+                    <li><a href="../index.html#news">お知らせ</a></li>
+                </ul>
+                <ul id="ftRightBottom">
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="../index.html#concept">CONCEPT</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#aboutus">ABOUT US</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#lesson">LESSON</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>
+                                <a href="../index.html#price">PRICE</a>
+                            </li>
+                            <li>
+                                <a href="../index.html#access">ACCESS</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ページTOPアイコン -->
+        <a href="#" id="pageTop" class="on"></a>
+        <!-- ローディング -->
+        <div class="wrap"></div>
+    </footer>
+    
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script src="lib/jquery.bxslider.js"></script>
+<script>
+    $(function(){
+        $('#nav-toggle').click(function() {
+            $('body').toggleClass('open');
+        });
+        $('#gnavi ul li a').click(function() {
+            $('body').removeClass('open');
+        });
+
+        $('a[href^="#"]').click(function(){
+            var speed = 600;
+            var href = $(this).attr("href");
+            if (href==="#"){
+                var target = $("html");
+            } else{
+                var target = $(href);
+            }
+            var position = target.offset().top-100;
+            $('html,body').animate({
+                scrollTop:position},speed,'swing');
+                return false;
+        });
+        $(window).scroll(function(){
+            const scrollVal = $(this).scrollTop();
+            console.log(scrollVal);
+            // TOPページアイコン
+            if(scrollVal > 300){
+              $('#pageTop').removeClass("on");
+            }else{
+              $('#pageTop').addClass("on");
+            }
+            if(scrollVal < 400){
+              $('#pageTop').css("opacity","0.2");
+            }else if(scrollVal < 600){
+              $('#pageTop').css("opacity","0.5");
+            }else if(scrollVal < 800){
+              $('#pageTop').css("opacity","0.8");
+            }else    
+              $('#pageTop').css("opacity","1");              
+        });
+        $(".wrap").fadeOut(500);
+    });    
+</script>    
+</body>
+</html>
